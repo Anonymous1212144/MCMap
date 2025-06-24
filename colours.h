@@ -1,3 +1,8 @@
+/*  A map that maps block to colour index to the palette in format.h
+    Copyright (C) 2025 Anonymous1212144
+    See copyright notice in map.cpp
+*/
+
 #ifndef COLOURS_H
 #define COLOURS_H
 
