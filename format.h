@@ -1,3 +1,8 @@
+/*  A header template for the PNG file format
+    Copyright (C) 2025 Anonymous1212144
+    See copyright notice in map.cpp
+*/
+
 #ifndef FORMAT_H
 #define FORMAT_H
 
