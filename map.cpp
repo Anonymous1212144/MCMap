@@ -398,12 +398,15 @@ void parse(uint32_t length, const std::array<int, 3> &state_info, std::string na
                 else if (name == "sections")
                 {
                     parse(-1, {0, 0, 0}, name);
-                    std::swap(palette_temp, palette[y]);
-                    palette_temp.clear();
-                    std::swap(blocks_temp, blocks[y]);
-                    blocks_temp.clear();
-                    blocks_set[y] = b_temp_set;
-                    b_temp_set = false;
+                    if (y < 25)
+                    {
+                        std::swap(palette_temp, palette[y]);
+                        palette_temp.clear();
+                        std::swap(blocks_temp, blocks[y]);
+                        blocks_temp.clear();
+                        blocks_set[y] = b_temp_set;
+                        b_temp_set = false;
+                    }
                 }
                 else
                     parse(-1, {0, 0, 0}, name);
