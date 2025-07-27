@@ -528,10 +528,13 @@ inline void write_file(std::vector<std::vector<uint8_t>> &data)
 
         while (true)
         {
-            if (flushing && deflate(&strm, Z_FINISH) == Z_STREAM_END)
+            if (flushing)
             {
-                ended = true;
-                break;
+                if (deflate(&strm, Z_FINISH) == Z_STREAM_END)
+                {
+                    ended = true;
+                    break;
+                }
             }
             else
                 deflate(&strm, Z_NO_FLUSH);
